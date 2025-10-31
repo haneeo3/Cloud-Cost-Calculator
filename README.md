@@ -1,8 +1,3 @@
-Here’s your full **README.md** version — clean, clear, and written in simple English.
-I added the Markdown formatting (`#`, `##`, `**`) so it looks professional when displayed on GitHub.
-Copy it exactly as-is into a file named **README.md**.
-
----
 
 # Cloud Cost Calculator
 
@@ -117,7 +112,3 @@ Your total AWS cost for today is **$22.45**, which is more than your limit of **
 * Add a **dashboard** to view cost reports directly.
 * Use **AI (Bedrock)** to predict next month’s cost.
 * Add **multiple users** so team members can get their own alerts.
-
----
-
-Would you like me to add a **Python example of the Lambda function** next, so people can copy and use it directly in their AWS setup?
