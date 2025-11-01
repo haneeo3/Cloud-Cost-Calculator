@@ -1,6 +1,3 @@
-Here’s your **updated and polished version** of the “Problems Faced” section, including your new issue about missing Python during the build test:
-
----
 
 ## ⚠️ Problems Faced (Setting Up AWS and Development Environment)
 
@@ -103,3 +100,35 @@ To fix this, I:
    ```
 
 After that, I re-ran the build and successfully **invoked the Lambda function** from VS Code.
+
+---
+
+### 🐳 7. **Docker Not Running for SAM Local Testing**
+
+After resolving the SAM and Python setup issues, I encountered another problem —
+the SAM CLI displayed the message:
+
+> “SAM setup is working, but you don’t have Docker running yet.”
+
+The **AWS SAM CLI** needs Docker to emulate the AWS Lambda runtime locally.
+Even though SAM was installed correctly, it couldn’t build or run Lambda functions without Docker running in the background.
+
+To fix this, I:
+
+1. Installed **Docker Desktop** on my system.
+2. Launched Docker and waited until the status showed **“Docker Engine is running.”**
+3. Verified Docker installation with:
+
+   ```
+   docker --version
+   ```
+4. Re-ran the SAM command:
+
+   ```
+   sam local invoke
+   ```
+
+This successfully launched a local Docker container and allowed me to **test my Lambda function locally**.
+
+---
+
