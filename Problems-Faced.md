@@ -131,4 +131,27 @@ To fix this, I:
 This successfully launched a local Docker container and allowed me to **test my Lambda function locally**.
 
 ---
+---
+
+### 🌐 8. **Proxy Connection Error When Running SAM Local**
+
+Even after fixing the Docker issue, I discovered that sometimes **SAM local invocation fails** with a  
+`ProxyConnectionError` or network timeout, even when the setup seems correct.
+
+This happens because **AWS SAM runs your Lambda function inside Docker**, and Docker can fail when  
+your **system or AWS CLI is stuck using a proxy** that doesn’t exist or is blocking traffic.
+
+That’s why it times out or shows a ProxyConnectionError even though your code is fine.
+
+You’re not doing anything wrong — **Windows sometimes sets proxy values automatically** (from Wi-Fi, VPN, or a browser),  
+and Docker inherits them. SAM then tries to connect through that proxy instead of your local Docker engine, which breaks everything.
+
+**In short:**
+- The code is fine.  
+- The template is fine.  
+- The problem is networking, not your setup.  
+
+Once the **proxy is cleared**, SAM will invoke your Lambda **instantly**.
+
+---
 
