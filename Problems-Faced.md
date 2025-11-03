@@ -131,7 +131,6 @@ To fix this, I:
 This successfully launched a local Docker container and allowed me to **test my Lambda function locally**.
 
 ---
----
 
 ### 🌐 8. **Proxy Connection Error When Running SAM Local**
 
