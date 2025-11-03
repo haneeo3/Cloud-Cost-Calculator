@@ -1,3 +1,19 @@
+# AWS Lambda Cloud Cost Checker – Setup Challenges and Solutions
+
+## 📋 Summary of Steps Completed
+
+1. Created **AWS Lambda function** `daily-cost-checker` in Python 3.12.
+2. Configured **IAM role** `daily-cost-checker-role` with:
+   - `AWSLambdaBasicExecutionRole`
+   - `ce:GetCostAndUsage` (Cost Explorer access)
+   - `sns:Publish` (SNS access)
+3. Created **SNS topic** and subscribed email endpoint.
+4. Tested Lambda function using **Test Event** in the AWS Console.
+5. Created **EventBridge Rule** to invoke Lambda daily (scheduled rule).
+6. Verified **CloudWatch Logs** for Lambda execution.
+7. Decided to use **AWS Console instead of SAM CLI/VS Code** due to networking, DNS, and proxy issues.
+
+---
 
 ## ⚠️ Problems Faced (Setting Up AWS and Development Environment)
 
