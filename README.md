@@ -103,19 +103,6 @@ You should get an alert if the cost passes your limit.
 Your total AWS cost for today is **$22.45**, which is more than your limit of **$20.00**.
 
 
-cloud-cost-calculator/
-│
-├── lambda/
-│   └── daily_cost_checker.py       Lambda function code
-│
-├── events/
-│   └── test_event.json             Sample test event for Lambda
-│
-├── docs/
-│   └── sns_alert_example.png       Screenshot of SNS email alert
-│
-└── README.md   
----
 
 ## Ideas for Later
 
